@@ -1,6 +1,7 @@
 import React, { MouseEvent } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux'
+import { request } from '../../services/requests'
 
 export default function SubmitButton() {
   const { answers } = useSelector((state: RootState) => state)
@@ -11,8 +12,11 @@ export default function SubmitButton() {
     return !filtered
   }
 
-  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
+    const endpoint = 'form'
+    const data = await request(endpoint, answers)
+    console.log(data)
   }
   return (
     <div>
