@@ -1,11 +1,12 @@
 import { selectOptions } from '../../consts'
 import AnswerButton from '../molecules/AnswerButton'
 import SelectInput from '../molecules/SelectInput'
+import SubmitButton from '../molecules/SubmitButton'
 import TextArea from '../molecules/TextArea'
 
 export default function Forms() {
   return (
-    <div>
+    <form>
       <AnswerButton numberAnswer={1}>
         1) Você se considera bom em lógica?
       </AnswerButton>
@@ -18,6 +19,7 @@ export default function Forms() {
       <TextArea numberAnswer={4} max={200} min={15}>
         4) Por favor, justifique a resposta anterior
       </TextArea>
-    </div>
+      <SubmitButton />
+    </form>
   )
 }
