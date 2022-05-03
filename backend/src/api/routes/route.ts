@@ -1,9 +1,12 @@
 import { Router } from 'express'
+import { answerFactory } from '../../app/factory/answer.factory'
 
 const router = Router()
 
-router.get('/answers', (request, response) => {
-  response.status(200).json()
+const controller = answerFactory()
+
+router.post('/form', async (request, response) => {
+  await controller.handle(request, response)
 })
 
 export { router }
