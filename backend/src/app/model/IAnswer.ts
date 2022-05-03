@@ -1,6 +1,5 @@
-import { IResponseFormDTO } from '../ResponseForme/ResponseFormDTO'
 
-export type IAnswer = IResponseFormDTO & {
+export type IAnswer = {
   positiveQuantity: number
   negativeQuantity: number
   notAvailableQuantity: number
