@@ -13,9 +13,13 @@ export default function TextArea({ children, numberAnswer: question, max, min }:
   const [value, setValue] = useState('')
   const dispatch = useDispatch()
 
+  const verifyTextArea = () => {
+    return value.length >= min && value.length <= max
+  }
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setValue(e.currentTarget.value)
-    if (e.currentTarget.value.length >= min && e.currentTarget.value.length <= max) {
+    if (verifyTextArea()) {
       dispatch(setAnswer({ question, answer: e.currentTarget.value }))
     } else {
       dispatch(setAnswer({ question, answer: false }))
@@ -27,6 +31,7 @@ export default function TextArea({ children, numberAnswer: question, max, min }:
         {children}
       </label>
       <textarea id='textarea' maxLength={max} minLength={min} value={value} onChange={handleChange} />
+      { !verifyTextArea() && <span>{`${value.length} / mínimo: ${min}`}</span> }
     </div>
   )
 }
