@@ -1,5 +1,6 @@
 import express from 'express'
 import 'express-async-errors'
+import { router } from './routes/route'
 
 class App {
   public app: express.Application
@@ -18,7 +19,7 @@ class App {
   }
 
   public addRouter(): void {
-    // this.app.use(router)
+    this.app.use(router)
     // this.app.use(errorMiddleware)
   }
 
