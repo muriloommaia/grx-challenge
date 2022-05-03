@@ -1,18 +1,23 @@
 import { MouseEvent, ReactNode, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setAnswer } from '../../redux/slices'
 
 type props = {
   children: ReactNode,
   numberAnswer: number,
 }
 
-export default function AnswerButton({ children, numberAnswer }: props) {
+export default function AnswerButton({ children, numberAnswer: question }: props) {
   const [positive, setPositive] = useState(false)
+  const dispatch = useDispatch()
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (e.currentTarget.id === 'positive') {
       setPositive(true)
+      dispatch(setAnswer({ question, answer: 'Sim' }))
     } else {
       setPositive(false)
+      dispatch(setAnswer({ question, answer: 'Não' }))
     }
   }
   return (
