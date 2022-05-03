@@ -1,5 +1,5 @@
 import Forms from '../organisms/Forms'
-
+import '../style/index.css'
 export default function Home() {
   return (
     <div>

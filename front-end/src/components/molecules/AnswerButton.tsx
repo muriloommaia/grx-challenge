@@ -8,25 +8,36 @@ type props = {
 }
 
 export default function AnswerButton({ children, numberAnswer: question }: props) {
-  const [positive, setPositive] = useState(false)
+  const [answer, setPositive] = useState('')
   const dispatch = useDispatch()
+
+  const isAnswer = (str: string) => answer === str
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (e.currentTarget.id === 'positive') {
-      setPositive(true)
-      dispatch(setAnswer({ question, answer: 'Sim' }))
+      setPositive('Sim')
+      dispatch(setAnswer({ question, answer }))
     } else {
-      setPositive(false)
-      dispatch(setAnswer({ question, answer: 'Não' }))
+      setPositive('Não')
+      dispatch(setAnswer({ question, answer }))
     }
   }
+
   return (
     <div>
       <p>{children}</p>
-      <button type='button' id={'positive'} onClick={handleClick} className={`${positive ? 'bg-green' : ''}`}>
+      <button
+        type='button'
+        id={'positive'}
+        onClick={handleClick}
+        className={`${isAnswer('Sim') ? 'border selected' : ''}`}>
         Sim
       </button>
-      <button type='button' id={'negative'} onClick={handleClick} className={`${!positive ? 'bg-green' : ''}`}>
+      <button
+        type='button'
+        id={'negative'}
+        onClick={handleClick}
+        className={`${isAnswer('Não') ? 'border selected' : ''}`}>
         Não
       </button>
     </div>
