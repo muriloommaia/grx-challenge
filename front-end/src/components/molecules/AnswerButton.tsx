@@ -16,10 +16,10 @@ export default function AnswerButton({ children, numberAnswer: question }: props
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (e.currentTarget.id === 'positive') {
       setPositive('Sim')
-      dispatch(setAnswer({ question, answer }))
+      dispatch(setAnswer({ question, answer: 'Sim' }))
     } else {
       setPositive('Não')
-      dispatch(setAnswer({ question, answer }))
+      dispatch(setAnswer({ question, answer: 'Não' }))
     }
   }
 
