@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "strict": true,
     "lib": [
-      "esnext"
+      "esnext", "DOM"
     ],
     "sourceMap": true,
     "experimentalDecorators": true,
