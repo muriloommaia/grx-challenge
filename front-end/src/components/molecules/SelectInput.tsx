@@ -18,11 +18,14 @@ export default function SelectInput({ children, numberAnswer: question, options 
   }
 
   return (
-    <div>
+    <div className='flex flex-col my-1'>
       <label htmlFor='select'>
         {children}
       </label>
-      <select id='select' value={selected} onChange={handleChange}>
+      <select
+        id='select' value={selected} onChange={handleChange}
+        className='border border-black p-1 px-6 rounded-lg mx-1 text-center bg-slate-200'
+      >
         <option value="selecione" disabled>Selecione</option>
         {options.map((option) => (
           <option key={option} value={option}>
