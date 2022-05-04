@@ -3,7 +3,7 @@ import path from 'path'
 import { answerFactory } from '../../app/factory/answer.factory'
 
 const options = {
-  root: path.join('public'),
+  root: path.join(''),
   dotfiles: 'deny',
   headers: {
     'x-timestamp': Date.now(),
