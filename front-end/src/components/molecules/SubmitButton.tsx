@@ -1,10 +1,13 @@
 import React, { MouseEvent } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../redux'
+import { setResponse } from '../../redux/slices/response.slice'
+import { setSubmit } from '../../redux/slices/submit.slice'
 import { request } from '../../services/requests'
 
 export default function SubmitButton() {
   const { answers } = useSelector((state: RootState) => state)
+  const dispatch = useDispatch()
 
   const verifyDisabled = () => {
     const values = Object.values(answers)
@@ -16,7 +19,8 @@ export default function SubmitButton() {
     e.preventDefault()
     const endpoint = 'form'
     const data = await request(endpoint, answers)
-    console.log(data)
+    dispatch(setResponse(data))
+    dispatch(setSubmit(true))
   }
   return (
     <div>
