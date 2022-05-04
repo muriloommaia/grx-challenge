@@ -1,13 +1,14 @@
+import cors from 'cors'
 import express from 'express'
 import 'express-async-errors'
 import { router } from './routes/route'
-
 class App {
   public app: express.Application
 
   constructor() {
     this.app = express()
     this.app.use(express.json())
+    this.app.use(cors())
     this.addRouter()
   }
 
