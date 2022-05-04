@@ -1,9 +1,8 @@
-import './App.css'
 import Home from './components/Pages/Home'
 
 function App() {
   return (
-    <div>
+    <div className='bg-slate-600'>
       <Home />
     </div>
   )
