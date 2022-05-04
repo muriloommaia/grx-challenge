@@ -25,11 +25,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://www.meuguru.net/_next/static/media/logo.1a16ba5a.svg" alt="Logo" width="180" height="180">
+  <a href="http://www.grxsolucoes.com.br/">
+    <img src="http://www.grxsolucoes.com.br/wa_images/white_logo_transparent_background.png" alt="Logo" width="180" height="180">
   </a>
 
-  <h3 align="center">Teste Prático - Desenvolvedor Full Stack Pleno</h3>
+  <h3 align="center">Teste Prático - Desenvolvedor GRX</h3>
 </div>
 
 
@@ -125,8 +125,8 @@ _Estando na raiz do projeto, você usará os seguintes comandos_:
 npm run compose:up
 ```
 
-Este comando executará o `docker-compose` que está na aplicação, após a finalização do docker-compose, o aplicativo estará rodando na porta `8080` do seu computador, podendo ser acessado através de:
-* http://localhost:8080/
+Este comando executará o `docker-compose` que está na aplicação, após a finalização do docker-compose, o aplicativo estará rodando na porta `3000` do seu computador, podendo ser acessado através de:
+* http://localhost:3000/
 
 Para parar os containers, na pasta raiz do projeto, execute:
 
@@ -171,7 +171,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Murilo Moura Maia - [LinkedIn](https://www.linkedin.com/in/murilommaia)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/muriloommaia/crud-guru)
+Project Link: [GRX_Challenge](https://github.com/muriloommaia/grx-challenge)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
