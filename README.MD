@@ -112,6 +112,12 @@ Achei o projeto interessante para uma vaga júnior, e foi uma boa oportunidade p
 
 Neste momento vamos entender como rodar o projeto localmente, para isso necessitamos falar de alguns pré requisitos.
 
+Para garantir que não haverá nenhum processo rodando nas portas (3000 e 3001) necessárias, rode o seguinte comando:
+
+```
+killall node
+```
+
 ### Pre-Requisitos
 
 Indispensável: `NPM`
