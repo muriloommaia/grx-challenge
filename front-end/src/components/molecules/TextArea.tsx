@@ -14,7 +14,7 @@ export default function TextArea({ children, numberAnswer: question, max, min }:
   const dispatch = useDispatch()
 
   const verifyTextArea = () => {
-    return value.length >= min && value.length <= max
+    return value.length >= min - 1 && value.length <= max
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
