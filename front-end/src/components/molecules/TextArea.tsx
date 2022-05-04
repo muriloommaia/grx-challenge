@@ -26,12 +26,14 @@ export default function TextArea({ children, numberAnswer: question, max, min }:
     }
   }
   return (
-    <div>
+    <div className='flex flex-col my-1'>
       <label htmlFor='textarea'>
         {children}
       </label>
       <textarea id='textarea' maxLength={max} minLength={min} value={value} onChange={handleChange} />
+      <div className='text-red-600'>
       { !verifyTextArea() && <span>{`${value.length} / mínimo: ${min}`}</span> }
+      </div>
     </div>
   )
 }
