@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux'
+import DownloadButton from '../atoms/DownloadButton'
 import Forms from '../organisms/Forms'
 import Result from '../organisms/Result'
 export default function Home() {
@@ -9,7 +10,8 @@ export default function Home() {
       <div className='bg-white bg-opacity-50 px-4 rounded-3xl mb-2'>
       <h1 className='text-4xl py-3'>Desafio Coleta - GRX</h1>
       </div>
-      { !isSubmit ? <Forms /> : <Result /> }
+      {!isSubmit ? <Forms /> : <Result />}
+      <DownloadButton />
     </div>
   )
 }

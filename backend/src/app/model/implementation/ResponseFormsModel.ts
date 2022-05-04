@@ -12,6 +12,6 @@ export class ResponseFormsModel implements IAnswerModel {
       ...data,
       [id]: answer
     }
-    await writeFile('forms.json', JSON.stringify(input))
+    await writeFile('./public/forms.json', JSON.stringify(input))
   }
 }
