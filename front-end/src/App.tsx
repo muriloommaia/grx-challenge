@@ -2,7 +2,7 @@ import Home from './components/Pages/Home'
 
 function App() {
   return (
-    <div className='bg-slate-600'>
+    <div className='min-h-[100vh] bg-blue-900 bg-pointers'>
       <Home />
     </div>
   )
