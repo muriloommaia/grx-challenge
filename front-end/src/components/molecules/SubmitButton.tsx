@@ -27,6 +27,7 @@ export default function SubmitButton() {
       <button
         type='submit'
         disabled={verifyDisabled()}
+        className="p-2 px-4 border-2 border-black rounded-lg bg-green-600 disabled:opacity-50"
         onClick={handleClick}
       >
         Enviar

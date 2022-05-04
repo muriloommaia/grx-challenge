@@ -6,7 +6,10 @@ import TextArea from '../molecules/TextArea'
 
 export default function Forms() {
   return (
-    <form>
+    <form
+      className='flex flex-col items-center bg-slate-200 border-2 rounded-lg border-black py-3
+      w-full'
+    >
       <AnswerButton numberAnswer={1}>
         1) Você se considera bom em lógica?
       </AnswerButton>

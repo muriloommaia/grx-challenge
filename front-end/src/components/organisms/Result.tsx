@@ -13,7 +13,8 @@ export default function Result() {
     setData(sorted)
   }, [])
   return (
-    <div>
+    <div className='flex flex-col items-center bg-slate-200 border-2 rounded-lg border-black py-3
+      w-full'>
       {data.map((entry) => {
         const [key, value] = entry
         if (key.includes('positive')) {

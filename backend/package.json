@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=local ts-node src/api/server",
+    "start": "cross-env NODE_ENV=local ts-node src",
     "build": "rimraf dist && tsc -p .",
     "test": "jest",
     "test:verbose": "jest --passWithNoTests --runInBand --detectOpenHandles",
