@@ -8,8 +8,8 @@ export const slice = createSlice({
     positiveQuantity: 0
   },
   reducers: {
-    setResponse(state, { payload }) {
-      return { ...state, ...payload }
+    setResponse(state, { payload: { positiveQuantity, negativeQuantity, notAvailableQuantity } }) {
+      return { ...state, positiveQuantity, negativeQuantity, notAvailableQuantity }
     }
   }
 })
