@@ -7,7 +7,9 @@ type props = {
 
 export default function Box({ name, value }: props) {
   return (
-    <div>
+    <div
+      className='min-w-[70%] m-auto flex justify-center py-1 border-2 border-black my-1 bg-slate-50 rounded-md'
+    >
       <div>
         {`${name}: ${value}`}
       </div>
